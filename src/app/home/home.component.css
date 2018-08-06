@@ -1,0 +1,15 @@
+
+body{
+    background: #2E9CE6;
+    padding: 3em;
+    font-family: 'Raleway', 'Arial';
+    color: white;
+}
+
+box-light{
+    background: rgb(125, 192, 236);
+    padding: 3em;
+    font-family: 'Raleway', 'Arial';
+    color: white;
+    border: white;
+}
