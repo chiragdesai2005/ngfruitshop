@@ -1,3 +1,26 @@
-<p>
-  product works!
-</p>
+<!--<form [formGroup]="orderForm"  autocomplete="off" novalidate>-->
+<form #customerForm="ngForm" autocomplete="off" novalidate>  
+<table class="table table-striped">
+  <thead class="table-primary">
+    <tr>
+      <th scope="col">Add to order</th>
+      <th scope="col">Product</th>
+      <th scope="col">Description</th>
+      <th scope="col">Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products; let i=index">
+      <td>
+        <div class="form-check">
+          <!--<input class="form-check-input" type="checkbox" formControlName="productId" [name]="products[i]" [id]="products[i]" [value]="products[i]" (ngModelChange)=printProduct()>-->
+          <input class="form-check-input" name="{{ product.id }}" type="checkbox" id="{{product.id}}" (change)="onChange(product,$event.target.checked)">
+        </div>
+      </td>
+      <td>{{product.name}}</td>
+      <td>{{product.description}}</td>
+      <td>${{product.price}}</td>
+    </tr>
+  </tbody>
+</table>
+</form>

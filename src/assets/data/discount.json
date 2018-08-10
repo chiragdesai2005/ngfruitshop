@@ -1,0 +1,4 @@
+[
+    {"id":1,"description":"Reduce the purchase price by 10%","discount":10,"type":"percentage"},
+    {"id":2,"description":"Reduce the purchase price by 5%","discount":5,"type":"flat"}
+]

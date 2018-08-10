@@ -19,15 +19,10 @@ export class HomeComponent implements OnInit {
   }
 
   showProduct() {
-    //let userId = 'qa-test';
-    // this.customerForm = new FormGroup({
-    //   customerId: new FormControl('', {
-    //     validators: Validators.required,
-    //     updateOn: 'change'
-    //   })
-    // });
     // console.log('i am inside showProduct',this.customer.id);
-    this.router.navigate(['product', this.customer.id]);
+    if(this.customer.id != undefined){
+      this.router.navigate(['order', this.customer.id]);
+    }
   }
 
 }

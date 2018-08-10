@@ -1,0 +1,7 @@
+[
+    {"id":1,"name":"Apple","description":"A round tasty red fruit that grows on trees","price":80.22},
+    {"id":2,"name":"Pear","description":"A soft green fruit that grows on trees","price":72.12},
+    {"id":3,"name":"Lemon","description":"A sour citrus fruit that grows on trees","price":13.50},
+    {"id":4,"name":"Grapes","description":"A juicy tasty grren fruit","price":40.30},
+    {"id":5,"name":"Orange","description":"A round orange juicy fruit that grows on trees","price":10.90}
+]

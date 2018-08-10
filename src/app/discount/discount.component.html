@@ -1,0 +1,23 @@
+<div class="form-group">
+  <h3>
+    Discounts available:
+  </h3>
+</div>
+<table class="table table-striped">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">Add to order</th>
+      <th scope="col">Discount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let discount of discounts; let i=index">
+      <td>
+        <div class="form-check">
+          <input type="radio" class="form-check-input" name="discount" id="discount" (change)="onChange(discount,$event.target.checked)">
+        </div>
+      </td>
+      <td>{{discount.description}}</td>
+    </tr>
+  </tbody>
+</table>

@@ -8,11 +8,20 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProductComponent } from './product/product.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { OrderComponent } from './order/order.component';
+import { HttpClientModule } from  '@angular/common/http';
+import { ProductService } from './product.service';
+import { DiscountService } from './discount/discount.service';
+import { DiscountComponent } from './discount/discount.component';
 const routes: Routes = [
   {
-    path: 'product/:userId',
+    path: 'product',
     component: ProductComponent,
+    data: { title: 'Products List' }
+  },
+  {
+    path: 'order/:userId',
+    component: OrderComponent,
     data: { title: 'Products List' }
   },
   {
@@ -26,16 +35,20 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-    ProductComponent
+    ProductComponent,
+    OrderComponent,
+    DiscountComponent
   ],
   imports: [
-    BrowserModule,
+  
+  BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routes),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ProductService, DiscountService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
